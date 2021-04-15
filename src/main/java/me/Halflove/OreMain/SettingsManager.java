@@ -37,8 +37,9 @@ public class SettingsManager {
                 Bukkit.getServer().getLogger().severe(ChatColor.RED + "Could not create config.yml!");
             }
         config = p.getConfig();
-        config.addDefault("messages.no-permission", "&8(&8&l!&8) &cThe big meanie, Halflove, says you can't do that :(");
+        config.addDefault("messages.no-permission", "&cYou can't do that :(");
         config.options().copyDefaults(true);
+
         dfile = new File(p.getDataFolder(), "data.yml");
         if (!dfile.exists())
             try {
