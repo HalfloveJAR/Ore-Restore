@@ -1,0 +1,10 @@
+name: OreRestore
+author: Halflove
+main: me.Halflove.OreMain.Main
+version: V4.15.21-1.16.5
+api-version: 1.15
+commands:
+  orerestore:
+    aliases: [or, ore]
+    usage: </Command>
+    description: Internal.
