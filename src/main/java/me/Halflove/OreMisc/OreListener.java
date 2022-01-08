@@ -36,8 +36,8 @@ public class OreListener implements Listener {
             if(SettingsManager.isMaterial(original)) {
                 if (block.getType().equals(Material.valueOf(original))) {
                     block.getWorld().dropItemNaturally(centerOfBlock, OreManager.smeltFilter(original));
-                    if(Bukkit.getPluginManager().getPlugin("Vault") != null)
-                        OreManager.payOre(player, original);
+                    /*if(Bukkit.getPluginManager().getPlugin("Vault") != null)
+                        OreManager.payOre(player, original);*/
                     block.setType(Material.valueOf(restored));
                     player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 2.0F, 2.0F);
                     (new BukkitRunnable() {

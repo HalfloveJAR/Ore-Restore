@@ -12,27 +12,27 @@ public class OreManager {
 
     public static ItemStack smeltFilter(String material){
         ItemStack item = new ItemStack(Material.valueOf(material));
-        if(item.getType().equals(Material.IRON_ORE)){
+        if(item.getType().name().contains("IRON_ORE")){
             item = new ItemStack(Material.IRON_INGOT, 1);
-        }else if(item.getType().equals(Material.GOLD_ORE)){
+        }else if(item.getType().name().contains("GOLD_ORE")){
             item = new ItemStack(Material.GOLD_INGOT, 1);
-        }else if(item.getType().equals(Material.LAPIS_ORE)){
+        }else if(item.getType().name().contains("LAPIS_ORE")){
             item = new ItemStack(Material.LAPIS_LAZULI, 4);
-        }else if(item.getType().equals(Material.COAL_ORE)){
+        }else if(item.getType().name().contains("COAL_ORE")){
             item = new ItemStack(Material.COAL, 1);
-        }else if(item.getType().equals(Material.REDSTONE_ORE)){
+        }else if(item.getType().name().contains("REDSTONE_ORE")){
             item = new ItemStack(Material.REDSTONE, 4);
-        }else if(item.getType().equals(Material.DIAMOND_ORE)){
+        }else if(item.getType().name().contains("DIAMOND_ORE")){
             item = new ItemStack(Material.DIAMOND, 1);
-        }else if(item.getType().equals(Material.EMERALD_ORE)){
+        }else if(item.getType().name().contains("EMERALD_ORE")){
             item = new ItemStack(Material.EMERALD, 1);
-        }else if(item.getType().equals(Material.NETHER_QUARTZ_ORE)){
+        }else if(item.getType().name().contains("QUARTZ_ORE")){
             item = new ItemStack(Material.QUARTZ, 1);
         }
         return item;
     }
 
-    public static void payOre(Player player, String material){
+    /*public static void payOre(Player player, String material){
         int amount = 0;
         Random random = new Random();
         ItemStack item = new ItemStack(Material.valueOf(material));
@@ -55,7 +55,7 @@ public class OreManager {
         }
         player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&a+$"+amount));
         Main.econ.depositPlayer(player, amount);
-    }
+    }*/
 
 }
 
